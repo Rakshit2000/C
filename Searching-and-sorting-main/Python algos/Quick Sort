@@ -1,0 +1,25 @@
+def partition(arr,l,h):
+    pivot = arr[l]
+    i=l
+    j=h
+    while i<j:
+        while arr[i]<=pivot:
+            i+=1
+        while arr[j]>pivot:
+            j-=1
+
+        if i<j:
+            (arr[i], arr[j]) = (arr[j], arr[i])
+    (arr[l], arr[j]) = (arr[j], arr[l])
+    return j
+
+def quicksort(arr,l,h):
+    if l<h:
+        p=partition(arr,l,h)
+        quicksort(arr,l,p)
+        quicksort(arr,p+1,h)
+
+n=int(input())
+arr=list(map(int, input().split()))
+quicksort(arr,0,n-1)
+print("Sorted array is :", *arr)

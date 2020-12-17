@@ -1,0 +1,17 @@
+'''
+
+Time Complexity:
+Best case - O(n)
+Worst cse - O(n2)
+s
+'''
+def bubblesort(arr,n):
+    for i in range(n):
+        for j in range(n-1):
+            if arr[j]>arr[j+1]:
+                arr[j],arr[j+1] = arr[j+1],arr[j]
+
+n=int(input())
+arr = list(map(int, input().split()))
+bubblesort(arr,n)
+print(*arr)
