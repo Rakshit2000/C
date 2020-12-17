@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+//Find the factors
+int findfactors(int num)
+{
+    int i,count=0;
+    for(i=1;i<=num;i++)
+    {
+        if(num%i==0)
+            count++;
+    }
+    return count;
+}
+//Check if the number has exactly 9 factors 
+void check(int num)
+{
+    int count=0,i;
+    for(i=1;i<=num;i++)
+    {
+        if(findfactors(i)==9) 
+            printf("%d ",i);
+            count++;
+    }
+    printf("\nTotal= %d",count);
+    
+}
+int main()
+{
+    int num;
+    printf("Enter the number: ");
+    scanf("%d",&num);
+    printf("The numbers which have exactly 9 divisors are : ");
+    check(num);
+  
+    
+    
+
+    return 0;
+}
+    

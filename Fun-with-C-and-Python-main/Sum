@@ -1,0 +1,30 @@
+//C:
+
+#include<stdio.h>
+
+int main()
+{
+    int number,sum=0;
+    scanf("%d",&number);
+    
+    
+    while(number)
+    {
+        sum = sum+(number%10);
+        number=number/10;
+    }
+    printf("Sum of digits is : %d",sum);
+    return 0;
+}
+
+//Python:
+def sumofdigits():
+    n = int(input())
+    sum=0
+    while(n):
+        sum = sum+(n%10)
+        n=n//10 #// -> Only gives the int value
+    return sum
+
+print(sumofdigits())    
+        

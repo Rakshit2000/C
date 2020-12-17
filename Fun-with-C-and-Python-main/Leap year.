@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int target(int year)
+{
+    if(year%400==0)
+    {
+        return 1;
+    }
+    if(year%100==0)
+    {
+        return 0;
+    }
+    if(year%4==0)
+    {
+        return 1;
+    }
+}
+int main()
+{
+    int year;
+    scanf("%d",&year);
+    
+    target(year)?printf("Leap year"):printf("Not a leap year");
+   
+    
+    
+    
+    return 0;
+    
+    
+}

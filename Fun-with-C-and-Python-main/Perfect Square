@@ -1,0 +1,58 @@
+// C:
+
+
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+    
+    int number, intvar;
+    scanf("%d",&number);
+    /*Method 1:
+    //sqrt has arguement of type - double and it also return(double)
+    double floatvar = sqrt((double)number);
+    intvar = floatvar;
+    if(intvar == floatvar)
+    {
+        printf("Success");
+    }
+    else
+    {
+        printf("Failure");
+    }
+    */
+    
+    /*Method 2 
+    double floatvar = sqrt((double)number);
+    //type-cast
+    intvar = (int)floatvar;
+    if((intvar*floatvar)==number)
+    {
+        printf("Success");
+    }
+    else
+    {
+        printf("Failure");
+    }
+    
+   */ 
+    
+    
+
+    return 0;
+}
+
+
+// Python:
+
+import math
+def checkPerfect():
+    n = int(input())
+    f = math.sqrt(n)
+    s = int(f)
+    if s==f:
+        return "Success"
+    else:
+        return "Failure"
+    
+print(checkPerfect())        

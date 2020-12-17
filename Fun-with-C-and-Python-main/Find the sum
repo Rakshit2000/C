@@ -1,0 +1,64 @@
+// C:
+
+#include <stdio.h>
+#include<stdlib.h>
+int main()
+{
+ int i,j,sum,n,flag=0,*arr;
+ scanf("%d",&sum);
+ scanf("%d",&n);
+ arr = (int *)malloc(n*sizeof(int));
+ 
+ if(arr==NULL)
+ {
+     printf("Error!");
+     exit(0);
+ }
+ for(i=0;i<n;i++)
+ {
+     scanf("%d",&arr[i]);
+ }
+ printf("Enter the elements: ");
+ for(i=0;i<n-1;i++)
+ {
+     for(j=1;j<n;j++)
+     {
+         if((arr[i]+arr[j])==sum)
+         {
+             printf("Sum found");
+             flag=1;
+             break;
+         }
+         
+     }
+     if(flag)
+     {
+         break;
+     }
+ }
+ if(!flag)
+ {
+     printf("Sum is not found");
+ }
+
+free(arr);
+
+    return 0;
+}
+
+// Python:
+sum,n = map(int,input("Enter the suum and number of elements: ").split())
+arr = list(map(int, input().split()))
+flag=0
+for i in range(0,n-1):
+    for j in range(1,n):
+        if arr[i]+arr[j]==sum:
+            print("Sum found")
+            flag=1
+            break
+    if flag:
+        break;
+if not flag:
+    print("Sum not found");
+        
+        

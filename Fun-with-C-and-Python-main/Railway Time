@@ -1,0 +1,44 @@
+//C:
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int hh,mm,ss;
+    char str[3];
+    
+    printf("Enter the hours: ");
+    scanf("%d",&hh);
+    
+    printf("Enter the minutes: ");
+    scanf("%d",&mm);
+    
+    printf("Enter the seconds: ");
+    scanf("%d",&ss);
+    
+    printf("Enter the string in 'am' or 'pm' or 'AM' or 'PM'");
+    scanf("%s",&str);
+    
+    if((hh>0 && hh<=12 && mm>=0 && mm<=59 && ss>=0 && ss<=59)||(strcmp(str,"PM")==0 || strcmp(str,"pm")==0 || strcmp(str,"AM")==0 || strcmp(str,"am")==0))
+    {
+        if((strcmp(str,"PM")==0 || strcmp(str,"pm")==0) && (hh!=12))
+        {
+            hh=hh+12;
+        }
+        if((strcmp(str,"AM")==0 || strcmp(str,"am")==0) && (hh==12))
+        {
+            hh=0;
+        }
+        printf("The obtained 24-hr format of input is:");
+        printf("%d:%d:%d\n",hh,mm,ss);
+    }
+    else
+    {
+        printf("Please enter the correct input.");
+    }
+    
+   
+   
+   
+   return 0;
+}

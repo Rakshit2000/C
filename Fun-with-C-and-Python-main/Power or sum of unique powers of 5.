@@ -1,0 +1,48 @@
+// C :
+#include <stdio.h>
+#include<math.h>
+int power(int n)
+{
+    int i=1,sum=0;
+    while(n>0)
+    {
+        int p = pow(5,i);
+        if(n&1)
+        {
+            sum=sum+p;
+        }
+        i++;
+        n=n/2;
+    }
+    return sum;
+}
+int main()
+{
+    int testcases;
+    scanf("%d",&testcases);
+    while(testcases--)
+    {
+        
+    
+    int n;
+    scanf("%d",&n);
+    printf("%d",power(n));
+    
+    
+    }
+    return 0;
+}
+
+//Python:
+
+def power(n):
+    s=0
+    i=1 
+    while n:
+        i=i*5
+        if n & 1:
+            s=s+i 
+        n=n//2   
+    return s    
+n=int(input())
+print(power(n))

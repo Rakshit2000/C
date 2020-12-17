@@ -1,0 +1,85 @@
+//C:
+
+
+#include <stdio.h>
+#include<math.h>
+
+int order(int x)
+{
+    int count=0;
+    while(x)
+    {
+        count++;
+        x = x/10;
+    }
+    return count;
+}
+
+int isArmstrong(int x)
+{
+    int count = order(x);
+    int temp=x,sum=0;
+    
+    while(temp)
+    {
+        
+        int r = temp%10;
+        sum+= pow(r,count);
+        temp = temp/10;
+    }
+
+    
+    if(sum==x)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+int main()
+{
+    int x;
+    scanf("%d",&x);
+    
+    if(isArmstrong(x))
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
+
+    return 0;
+}
+
+//Python:
+def order(x):
+    count=0
+    while x:
+        count+=1 
+        x=x//10
+    return count
+
+def isarmstrong(x):
+    count = order(x)
+    temp=x
+    sum=0
+    while temp:
+        r=temp%10
+        sum+=pow(r,count)
+        temp = temp//10
+        
+    if sum==x:
+        return 1
+    else:
+        return 0 
+
+x = int(input())
+if isarmstrong(x):
+    print("TRUE")
+else:
+    print("FALSE")
+        

@@ -1,0 +1,44 @@
+//Python:
+
+
+def gcd(a,b):
+    if b==0:
+        return a
+    if a==0:
+        return b
+    if a==b:
+        return a
+    if a>b:
+        return gcd(a-b,b)
+    return gcd(a,b-a)
+
+a = int(input())
+b = int(input())
+s = gcd(a,b)
+print(s)
+
+
+
+//C :
+#include<stdio.h>
+
+int gcd(int a, int b)
+{
+    if(a==0)
+        return a;
+    if(b==0)
+        return b;
+    if(a==b)
+        return a;
+    if(a>b)
+        return gcd(a-b,b);
+    return gcd(a,b-a);
+    
+}
+int main()
+{
+    int n1,n2;
+    scanf("%d %d",&n1,&n2);
+    printf("The GCD of %d and %d is = %d",n1,n2,gcd(n1,n2));
+    return 0;
+}

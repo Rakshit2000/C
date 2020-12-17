@@ -1,0 +1,61 @@
+//C:
+/* 1st method 
+#include <stdio.h>
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    int max = (a>b)?a:b;
+    
+    while(max>0)
+    {
+        if(max%a==0 && max%b==0)
+        {
+            printf("%d",max);
+            break;
+        }
+        ++max;
+    }
+    return 0;
+}
+*/
+// 2nd method  ------    a*b = lcm(a,b)*gcd(a,b)
+#include<stdio.h>
+int gcd(int a , int b)
+{
+    if(a==0)
+    return b;
+    if(b==0)
+    return a;
+    if(a==b)
+    return a;
+    if(a>b)
+    return(a-b,b);
+    return(a,b-a);
+}
+int lcm(int a, int b)
+{
+    return((a*b)/gcd(a,b));
+}
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    printf("%d",lcm(a,b));
+    return 0;
+}
+
+
+
+//Python:
+a,b = map(int, input().split())
+if a>b:
+    max=a 
+else:
+    max=b
+while 1:
+    if max%a==0 and max%b==0:
+        print(max)
+        break;
+    max+=1     
+    

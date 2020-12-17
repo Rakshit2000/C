@@ -1,0 +1,12 @@
+
+
+#include <stdio.h>
+// ## is String - Token Pasting of C Macros(##) which concatenates a and b.
+#define merge(a,b) b##a 
+int main()
+{
+    printf("%d",merge(12,36));
+   
+    
+    return 0;
+}

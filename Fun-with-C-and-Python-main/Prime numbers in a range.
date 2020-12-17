@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<math.h>
+int prime(int n)
+{
+    if(n==1)
+    {
+        return 0;
+    }
+    int i,flag=1;
+    for(i=2;i<=sqrt(n);i++)
+    {
+        if(n%i==0)
+        {
+            flag=0;
+            break;
+        }
+    }
+    return flag;
+    
+}
+int main()
+{
+    int i,a[5];
+    for(i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<5;i++)
+    {
+        if(prime(a[i])==1)
+        {
+            printf("%d is a prime number\n",a[i]);
+        }
+        else
+        {
+            printf("%d is not a prime number\n",a[i]);
+        }
+    }
+    
+}

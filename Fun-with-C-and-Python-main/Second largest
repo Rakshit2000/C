@@ -1,0 +1,78 @@
+// C :
+
+
+#include <stdio.h>
+
+int main() 
+{
+	// your code goes here
+	int a,b,c;
+	scanf("%d %d %d",&a,&b,&c);
+	
+	if(a>=b && a>=c)
+	{
+	    if(b>=c)
+	    {
+	        printf("%d",b);
+	    }
+	    else
+	    {
+	        printf("%d",c);
+	    }
+
+
+	    
+	}
+	
+	else if(b>=a && b>=c)
+	{
+	    if(a>=c)
+	    {
+	        printf("%d",a);
+	    }
+	    else
+	    {
+	        printf("%d",c);
+	    }
+	    
+
+	}
+	
+	else if(a>=b)
+	{
+	    printf("%d",a);
+	}
+	
+	else
+	{
+	    printf("%d",b);
+	}
+
+
+	return 0;
+}
+
+// Python:
+
+# cook your dish here
+a,b,c = map(int,input().split())
+
+def second_largest_of_three():
+    if a>=b and a>c: 
+        if b>=c:
+            return b 
+        else:
+            return c 
+    elif b>=a and b>=c:
+        if a>=c:
+            return a 
+        else: 
+            return c
+            
+    elif a>=b:
+        return a 
+    else:
+        return b
+print(second_largest_of_three())        
+        
+

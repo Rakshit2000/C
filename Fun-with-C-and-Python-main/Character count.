@@ -1,0 +1,24 @@
+
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+    int i,str[26]={0};
+    char words[100];
+    scanf("%s",words);   
+    int len=strlen(words);
+    
+    for(i=0;i<len;i++)
+    {
+        str[words[i]%97]++;
+    }
+    for(i=0;i<26;i++)
+    {
+        printf(" %c : %d\n",i+97,str[i]);
+    }
+    
+    return 0;
+    
+    
+}

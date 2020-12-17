@@ -1,0 +1,44 @@
+// Code in C:
+
+
+#include <stdio.h>
+
+int factorial(unsigned int n)
+{
+    int result=1;
+    if(n<=0)
+    {
+        return 1;
+    }
+    for(int i=n;i>=2;i--)
+    {
+        result = result*i;
+    }
+    return result;
+}
+
+int main()
+{
+   int num;
+   scanf("%u",&num);
+   printf("Factorial of %u is = %u",num,factorial(num));
+   
+   return 0;
+}
+
+
+// Code in Python :
+
+
+
+def factorial(n):
+    if n<=0:
+        return 1 
+    else:
+        return n*factorial(n-1)
+        
+
+n = int(input("Enter a number: "))
+fact = factorial(n)
+print("The factorial of a number is: " + fact)
+        
