@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<limits.h>
+int main()
+{
+    int r,c,i,j,temp,max=INT_MIN,index=-1;
+    int arr[10][10];
+
+    scanf("%d %d",&r,&c);
+    
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    
+    for(i=0;i<r;i++)
+    {
+        int sum=0;
+        for(j=0;j<c;j++)
+        {
+            sum+=arr[i][j];
+        }
+         if(sum>max)
+    {
+        max=sum;
+        index=i;
+    }
+    
+    }
+   
+    /*
+    for(i=0;i<r;i++)
+    {
+        printf("%d ",sum[i]);
+    }*/
+
+    /*
+    for(i=0;i<r;i++)
+    {
+        if(sum[0]<sum[i+1])
+        {
+            temp = sum[0];
+            sum[0]=sum[i+1];
+            sum[i+1]=temp;
+            max=max+1;
+            
+        }
+    }
+    
+    printf("Row with max sum %d is : %d",sum[0],max);
+    */
+    printf("Row %d has maximum sum: %d",index+1,max);

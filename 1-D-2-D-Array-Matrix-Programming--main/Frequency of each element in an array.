@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main()
+{
+    int arr[100],i,j,n,fr[100],c;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+        fr[i]=-1; //We haven't started counting the frequency 
+    }
+    for(i=0;i<n;i++)
+    {
+        c=1;
+        for(j=i+1;j<n;j++)
+        {
+            if(arr[i]==arr[j])
+            {
+                c++;
+                fr[j]=0;
+            }
+                
+        }
+        if(fr[i]!=0)
+        {
+            fr[i]=c;
+        }
+            
+    }
+    printf("Frequency of each element is: \n");
+    for(i=0;i<n;i++)
+    {
+        if(fr[i]!=0)
+            printf("%d occurs %d times\n",arr[i],fr[i]);
+    }
+    
+
+    return 0;
+}

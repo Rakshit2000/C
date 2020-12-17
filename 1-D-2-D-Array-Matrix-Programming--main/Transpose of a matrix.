@@ -1,0 +1,42 @@
+#include<stdio.h>
+
+int main()
+{
+    int i,j,r,c,arr[10][10],arrtranspose[10][10];
+    scanf("%d %d",&r,&c);
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    printf("\n");
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            arrtranspose[j][i]=arr[i][j];
+        }
+        
+    }
+    printf("\n");
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("%d ",arrtranspose[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

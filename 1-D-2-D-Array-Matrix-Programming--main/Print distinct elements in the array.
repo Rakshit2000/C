@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdlib.h>
+void distinct(int arr[], int n);
+
+void distinct(int arr[], int n)
+{
+    int i,j;
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<i;j++)
+        {
+            if(arr[i]==arr[j])
+                break;
+        }
+        if(i==j)
+            printf("%d\n",arr[i]);
+    }
+}
+int main()
+{
+    int *arr,i,n;
+    scanf("%d",&n);
+    arr=(int *)malloc(n*sizeof(int));
+    if(arr==NULL)
+    {
+        printf("Error!");
+        exit(0);
+    }
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    distinct(arr,n);
+    
+
+    
+    
+    
+
+    return 0;
+}
