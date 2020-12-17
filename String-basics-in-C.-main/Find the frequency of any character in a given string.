@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    char str[100],character;
+    gets(str);
+    int l = strlen(str);
+    int frequency=0;
+    printf("Input the charcter to search: ");
+    scanf("%c",&character);
+    
+    for(int i=0;i<l;i++)
+    {
+        if(str[i]==character)
+            frequency++;
+    }
+    printf("The frequence of the given charcter is: %d",frequency);
+    
+    
+
+    return 0;
+}

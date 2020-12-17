@@ -1,0 +1,33 @@
+// 1st method
+
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    char str[20];
+    int count=0;
+    printf("Enter the string :");
+    gets(str);
+    for(int i=0;str[i]!='\0';i++)
+    {
+        count++;
+    }
+    printf("Length is : %d",count);
+    
+    return 0;
+}
+
+// 2nd method
+
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    char str[20];
+    printf("Enter the string :");
+    gets(str);
+    printf("Length is : %d",strlen(str));
+    
+    
+    return 0;
+}
