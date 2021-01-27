@@ -5,18 +5,21 @@ Best or Worst case - O(n2)
 Time complexity for swap - O(n)
 '''
 
-def selectionsort(arr):
-    n = len(arr)
-    for i in range(n):
+def selectSort(l):
+    n = len(l)
+
+    for i in range(n - 1):
         min = i
-        for j in range(i+1,n):
-            if arr[j]<arr[min]:
-                min=j
-            (arr[i], arr[min]) = (arr[min], arr[i])
-    return 
+        for j in range(i + 1, n):
+
+            if l[j] < l[min]:
+                min = j
+
+        l[min], l[i] = l[i], l[min]
 
 
-arr=list(map(int, input().split()))
-selectionsort(arr)
-print("Sorted array is:")
-print(arr)
+l = [10, 2, 1, 3]
+
+selectSort(l)
+
+print(l)
