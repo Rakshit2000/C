@@ -1,5 +1,5 @@
 """
-Time complexity: O(m+n)
+Time complexity: O(n*log(n))
 """
 
 def merge(a, low, mid, high):
