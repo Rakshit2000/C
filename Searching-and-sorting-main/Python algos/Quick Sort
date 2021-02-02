@@ -1,3 +1,11 @@
+"""
+Time Complexity:
+
+    Worst Case: O(n2)
+    Best Case: O(n)
+"""
+
+
 def lomutoPartition(arr, l, h):
     pivot = arr[h]
     i = l - 1
