@@ -2,7 +2,7 @@
 Time Complexity:
 
     Worst Case: O(n2)
-    Best Case: O(n)
+    Best Case: O(nlogn)
 """
 
 
